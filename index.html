@@ -24,51 +24,54 @@
 
             <h1>Create a City</h1>
             <label>
-                City Name
+                City Name<br>
                 <input id="name-input">
             </label>
-            
-            <label>
-                Climate
+            <br>
+            <label class="climate">
+                Climate<br>
                 <select id="climate-select">
 
-                    <option value="tropical">Tropical</option>
-                    <option value="dry">Dry</option>
-                    <option value="polar">Polar</option>
+                    <option id="tropical" value="tropical.png">Tropical</option>
+                    <option id="dry" value="dry.png">Dry</option>
+                    <option id="polar" value="polar.png">Polar</option>
 
                 </select>
             </label>
-
+            <br>
             <label>
-                Give Your City a Slogan!
+                Give Your City a Slogan!<br>
                 <textarea id="slogan-text"></textarea>
             </label>
 
-            <label>
-                Architecture
+            <label class="design">
+                <br>Architecture<br>
                 <select id="design-select">
 
-                    <option value="modern.png" selected>Modern</option>
-                    <option value="pueblo.png">Pueblo</option>
-                    <option value="brutalist.png">Brutalist</option>
+                    <option id="modern" value="modern.png" selected>Modern</option>
+                    <option id="pueblo" value="pueblo.png">Pueblo</option>
+                    <option id="brutalist" value="brutalist.png">Brutalist</option>
 
                 </select>
             </label>
+            <br>
+            <label>
+
+                <button id="add-button">Add City</button>
+            
+            </label>
 
         </section>
-
-        <label>
-
-            <button id="add-button">Add City</button>
-            
         
-        </label>
+
+       
 
         <section id="display-section">
 
             <div id="city-display" class="board">
 
                 <h2 id="name-display">My City</h2>
+                <img id="climate-display" src="./assets/images/dry.png">
                 <img id="design-display" src="./assets/images/modern.png">
                 <p id="slogan-display">All Are Welcome!</p>
 
@@ -79,8 +82,9 @@
         <section id="log-section">
 
             <ul class="city-log">
-                <button id="city-reload"></button>
+                <button id="city-reload">Revisit City</button>
             </ul>
+            <table></table>
 
         </section>
 
