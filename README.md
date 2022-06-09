@@ -33,7 +33,7 @@
                 - option
     - label: button
         - button
-        - button 2
+        
 
     - section 2 (city display)
         - div
@@ -43,6 +43,7 @@
 
     - section 3 (city add)
         - ul
+        - button
 
 
 ## States & Events

@@ -20,36 +20,69 @@
 
     <main>
 
-        <section id="city-creator">
+        <section id="creator-section" class="controls">
 
-            <h1></h1>
+            <h1>Create a City</h1>
             <label>
-                <input>
+                City Name
+                <input id="name-input">
             </label>
             
             <label>
-                <select>
+                Climate
+                <select id="climate-select">
 
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="tropical">Tropical</option>
+                    <option value="dry">Dry</option>
+                    <option value="polar">Polar</option>
 
                 </select>
             </label>
 
             <label>
-                <textarea></textarea>
+                Give Your City a Slogan!
+                <textarea id="slogan-text"></textarea>
             </label>
 
             <label>
-                
+                Architecture
+                <select id="design-select">
+
+                    <option value="modern.png" selected>Modern</option>
+                    <option value="pueblo.png">Pueblo</option>
+                    <option value="brutalist.png">Brutalist</option>
+
+                </select>
             </label>
 
         </section>
 
-        <section></section>
+        <label>
 
-        <section></section>
+            <button id="add-button">Add City</button>
+            
+        
+        </label>
+
+        <section id="display-section">
+
+            <div id="city-display" class="board">
+
+                <h2 id="name-display">My City</h2>
+                <img id="design-display" src="./assets/images/modern.png">
+                <p id="slogan-display">All Are Welcome!</p>
+
+            </div>
+
+        </section>
+
+        <section id="log-section">
+
+            <ul class="city-log">
+                <button id="city-reload"></button>
+            </ul>
+
+        </section>
 
     </main>
 
