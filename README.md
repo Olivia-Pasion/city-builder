@@ -33,6 +33,7 @@
                 - option
     - label: button
         - button
+        - button 2
 
     - section 2 (city display)
         - div
@@ -54,6 +55,7 @@ add-button => click
 
 
 
+
 1. For events, ask one by one, "What happens when" for each of these events. Does any state change?
 1. Once we know the _why_ of elements, state, and events -- think about how to implement the "Why" as a "How"
 1. Think about how to **validate each of your features** according to a Definition of Done
@@ -70,8 +72,7 @@ File parts:
 
 Detailed description:
 
-1. Imports 
-    - bring in utility functions plus tested logic and render functions
+
 1. State
     - data changes over time
     - constants with special meaning
