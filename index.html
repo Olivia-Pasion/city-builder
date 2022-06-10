@@ -73,7 +73,7 @@
             <div id="city-display" class="board">
 
                 <h2 id="name-display">My City</h2>
-                <img id="climate-display" src="./assets/images/climate/dry.png">
+                <img id="climate-display" src="./assets/images/climate/tropical.png">
                 <img id="design-display" src="./assets/images/design/modern.png">
                 <p id="slogan-display">All Are Welcome!</p>
 
@@ -83,10 +83,24 @@
 
         <section id="log-section">
 
-            <ul class="city-log">
-                <button id="city-reload">Revisit City</button>
-            </ul>
-            <table></table>
+            <button id="city-reload">Revisit City</button>
+
+            <table class="city-log">
+                <thead>
+                    <tr>
+                        <th>Your Cities</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Climate</td>
+                        <td>Architecture</td>
+                        <td>Slogan Count</td>
+                    </tr>
+                </tbody>
+            </table>
 
         </section>
 

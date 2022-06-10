@@ -5,9 +5,9 @@
 function getDefaultCity() {
     const defaultCity = {
         name: '',
-        climate: 'tropical',
+        climate: 'tropical.png',
         slogan: [],
-        design: 'modern',
+        design: 'modern.png',
     };
     return defaultCity;
 }
@@ -21,11 +21,20 @@ const cities = [];
 
     // define and grab DOM elements
 const creatorSection = document.getElementById('creator-section');
+const displaySection = document.getElementById('display-section');
+
 
 const nameInput = creatorSection.querySelector('input');
 const sloganText = creatorSection.querySelector('textarea');
+
 const [climateSelect, designSelect] = creatorSection.querySelectorAll('select');
-const [addButton, addSlogan] = creatorSection.querySelectorAll('button');
+const [addSlogan, addButton] = creatorSection.querySelectorAll('button');
+
+//display section variables
+let [climateImage, designImage] = displaySection.querySelectorAll('img');
+const cityName = displaySection.querySelector('h2');
+const citySlogan = displaySection.querySelector('p');
+
 
 
     // display functions
@@ -33,9 +42,10 @@ const [addButton, addSlogan] = creatorSection.querySelectorAll('button');
 function displayCreator() {
 
     nameInput.value = city.name;
-    climateSelect.value = city.climate;
-    sloganText.value = city.slogan;
-    designSelect.value = city.design;
+    
+    sloganContent = city.slogan;
+    
+    
 
 }
     // optional: subscribe to events
@@ -45,6 +55,7 @@ nameInput.addEventListener('input', () => {
     
     city.name = nameInput.value;
     displayCreator();
+    displayBoard();
     
            
 });
@@ -52,27 +63,40 @@ nameInput.addEventListener('input', () => {
 climateSelect.addEventListener('change', () => {
     city.climate = climateSelect.value;
     displayCreator();
+    displayBoard();
+    
+    
 });
 
 addSlogan.addEventListener('click', () => {
-    city.slogan.push(sloganDisplay.value);
+    city.slogan.push(sloganContent);
     displayCreator();
+    displayBoard();
+    sloganText.value = '';
+    
 });
 
+let sloganContent;
+
 sloganText.addEventListener('input', () => {
-    city.slogan = sloganText.value;
-    displayCreator;
+    sloganContent = sloganText.value;
+    displayCreator();
 });
 
 designSelect.addEventListener('change', ()=> {
     city.design = designSelect.value;
     displayCreator();
+    displayBoard();
 });
 
 addButton.addEventListener('click', () => {
     cities.push(city);
-    displayCities();
+    
+    //displayCities();
     city = getDefaultCity();
+    console.log(cities);
+    displayBoard();
+
 });
 
         // logic and calculations
@@ -81,10 +105,7 @@ addButton.addEventListener('click', () => {
     // optional: handle functions for shared event handler logic
 //Board
     // define and grab DOM elements
-const displaySection = document.getElementById('display-section');
-const [climateImage, designImage] = displaySection.querySelectorAll('img');
-const cityName = displaySection.querySelector('h2');
-const citySlogan = displaySection.querySelector('p');
+
    
     
     // display functions
@@ -92,9 +113,10 @@ const citySlogan = displaySection.querySelector('p');
 function displayBoard() {
 
     cityName.textContent = city.name;
-    climateImage.src = './assets/images/climate/' + city.climate + '.png';
-    designImage.src = './assets/images/design/' + city.design + '.png';
+    climateImage.src = './assets/images/climate/' + city.climate;
+    designImage.src = './assets/images/design/' + city.design;
     citySlogan.textContent = city.slogan;
+    
     
 }
 
@@ -114,8 +136,10 @@ function displayLogSection() {
     list.innerHTML = '';
 
     for (const city of cities) {
-        const li = document.createElement('li');
+        const tbody = document.createElement('tbody');
         
+        const nameDisplay = document.createElement('td');
+        nameDisplay.textContent = city.name;
     }
 
 }
