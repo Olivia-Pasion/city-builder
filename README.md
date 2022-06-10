@@ -47,7 +47,8 @@
 
 
 ## States & Events
-
+City Object
+Array
 city-name-input => input
 climate-select => change
 architecture-select => change

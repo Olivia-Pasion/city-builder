@@ -6,7 +6,7 @@ function getDefaultCity() {
     const defaultCity = {
         name: '',
         climate: 'tropical',
-        slogan: '',
+        slogan: [],
         design: 'modern',
     };
     return defaultCity;
@@ -22,12 +22,10 @@ const cities = [];
     // define and grab DOM elements
 const creatorSection = document.getElementById('creator-section');
 
-const nameInput = document.getElementById('name-input');
-const nameDisplay = document.getElementById('name-display');
-const sloganText = document.getElementById('slogan-text');
-const SloganDisplay = document.getElementById('slogan-display');
-const [climateSelect, designSelect] = creatorSection.querySelectorAll('change');
-const addButton = document.getElementById('add-button');
+const nameInput = creatorSection.querySelector('input');
+const sloganText = creatorSection.querySelector('textarea');
+const [climateSelect, designSelect] = creatorSection.querySelectorAll('select');
+const [addButton, addSlogan] = creatorSection.querySelectorAll('button');
 
 
     // display functions
@@ -44,8 +42,11 @@ function displayCreator() {
         // event handlers - what needs to happen?
 
 nameInput.addEventListener('input', () => {
-    nameDisplay.textContent = nameInput.value;
-    displayCreator();        
+    
+    city.name = nameInput.value;
+    displayCreator();
+    
+           
 });
         
 climateSelect.addEventListener('change', () => {
@@ -53,9 +54,14 @@ climateSelect.addEventListener('change', () => {
     displayCreator();
 });
 
-sloganText.addEventListener('input', () => {
-    SloganDisplay.textContent = sloganText.value;
+addSlogan.addEventListener('click', () => {
+    city.slogan.push(sloganDisplay.value);
     displayCreator();
+});
+
+sloganText.addEventListener('input', () => {
+    city.slogan = sloganText.value;
+    displayCreator;
 });
 
 designSelect.addEventListener('change', ()=> {
@@ -63,16 +69,36 @@ designSelect.addEventListener('change', ()=> {
     displayCreator();
 });
 
-
+addButton.addEventListener('click', () => {
+    cities.push(city);
+    displayCities();
+    city = getDefaultCity();
+});
 
         // logic and calculations
         // state update
         // re-display components (which ones?)
     // optional: handle functions for shared event handler logic
 //Board
-   
     // define and grab DOM elements
+const displaySection = document.getElementById('display-section');
+const [climateImage, designImage] = displaySection.querySelectorAll('img');
+const cityName = displaySection.querySelector('h2');
+const citySlogan = displaySection.querySelector('p');
+   
+    
     // display functions
+
+function displayBoard() {
+
+    cityName.textContent = city.name;
+    climateImage.src = './assets/images/climate/' + city.climate + '.png';
+    designImage.src = './assets/images/design/' + city.design + '.png';
+    citySlogan.textContent = city.slogan;
+    
+}
+
+
     // optional: subscribe to events
         // event handlers - what needs to happen?
         // logic and calculations
@@ -80,7 +106,19 @@ designSelect.addEventListener('change', ()=> {
         // re-display components (which ones?)
     // optional: handle functions for shared event handler logic
 //Add City
-    
+
+const logSection = document.getElementById('log-section');
+const list = logSection.querySelector('table');
+
+function displayLogSection() {
+    list.innerHTML = '';
+
+    for (const city of cities) {
+        const li = document.createElement('li');
+        
+    }
+
+}
     // define and grab DOM elements
     // display functions
     // optional: subscribe to events
