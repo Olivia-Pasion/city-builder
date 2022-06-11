@@ -12,6 +12,13 @@ main {
         grid-gap: 30px;
     }
 }
+.display-section {
+
+    width: 250px;
+    background-color: fuchsia;
+    text-align: center;  
+      
+}
 
 #creator-section {
     width: 100%;
@@ -31,19 +38,19 @@ h1 {
 
 
 
-#tropical {
+.tropical {
     background-color: fuchsia;
     border-color: aquamarine;
 
 }
 
-#dry {
+.dry {
     background-color: darkgoldenrod;
     border-color: red;
 
 }
 
-#polar {
+.polar {
     background-color: aliceblue;
     border-color: aqua;
 
@@ -51,34 +58,22 @@ h1 {
 
 
 
-#modern {
+.modern {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#pueblo {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.pueblo {
+    font-family: fantasy;
 
 }
 
-#brutalist {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
-    'Lucida Grande', 
-    'Lucida Sans', Arial, 
-    sans-serif;
+.brutalist {
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-#add-button {
 
-}
 
-#display-section {
 
-    width: 250px;
-    background-color: gray;
-    text-align: center;  
-    
-    
-}
 
 .board {
     align-items: center;
