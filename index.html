@@ -20,6 +20,90 @@
 
     <main>
 
+        <section id="creator-section" class="controls">
+
+            <h1>Create a City</h1>
+            <label>
+                City Name<br>
+                <input id="name-input">
+            </label>
+            <br>
+            <label class="climate">
+                Climate<br>
+                <select id="climate-select">
+
+                    <option id="tropical" value="tropical">Tropical</option>
+                    <option id="dry" value="dry">Dry</option>
+                    <option id="polar" value="polar">Polar</option>
+
+                </select>
+            </label>
+            <br>
+            <label>
+                Give Your City a Slogan!<br>
+                <textarea id="slogan-text"></textarea>
+                <br>
+                <button id="addSlogan">Add Slogan</button>
+            </label>
+
+            <label class="design">
+                <br>Architecture<br>
+                <select id="design-select">
+
+                    <option id="modern" value="modern" selected>Modern</option>
+                    <option id="pueblo" value="pueblo">Pueblo</option>
+                    <option id="brutalist" value="brutalist">Brutalist</option>
+
+                </select>
+            </label>
+            <br>
+            <label>
+
+                <button id="add-button">Add City</button>
+            
+            </label>
+
+        </section>
+        
+
+       
+
+        <section id="display-section" class ="display-section">
+
+            <div id="city-display" class="board">
+
+                <h2 id="name-display">My City</h2>
+                <img id="climate-display" src="./assets/images/climate/tropical.png">
+                <img id="design-display" src="./assets/images/design/modern.png">
+                <p id="slogan-display">All Are Welcome!</p>
+
+            </div>
+
+        </section>
+
+        <section id="log-section">
+
+           
+
+            <table class="city-log">
+                <thead>
+                    <tr>
+                        <th>Your Cities</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Climate</td>
+                        <td>Architecture</td>
+                        <td>Slogan Count</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
     </main>
 
     <footer>&copy;2021 Aspiring Software Developer</footer>

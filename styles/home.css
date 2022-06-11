@@ -1,1 +1,91 @@
 /* add css for index.html */
+
+main {
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    main {
+        
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        grid-gap: 30px;
+    }
+}
+.display-section {
+
+    width: 250px;
+    background-color: fuchsia;
+    text-align: center;  
+      
+}
+
+#creator-section {
+    width: 100%;
+    max-width: 400px;
+   
+}
+
+
+
+label {
+    font-size: large;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+
+
+.tropical {
+    background-color: fuchsia;
+    border-color: aquamarine;
+
+}
+
+.dry {
+    background-color: darkgoldenrod;
+    border-color: red;
+
+}
+
+.polar {
+    background-color: aliceblue;
+    border-color: aqua;
+
+}
+
+
+
+.modern {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pueblo {
+    font-family: fantasy;
+
+}
+
+.brutalist {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+.board {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+.board img {
+    
+    width: 50%;
+    align-items: center;
+
+}
+
+

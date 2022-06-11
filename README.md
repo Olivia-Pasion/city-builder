@@ -8,14 +8,56 @@
 
 ## Making a plan
 
-1. Make a drawing of your app. **Simple "wireframes"**
+
+![wire Frame](./assets/city-wire.png)
+
 1. Once you have a drawing, **name the HTML elements** you'll need to realize your vision**
-1. Determine the Components (sections) of your app.
-1. Within each component:
-    - For each HTML element ask: **Why do I need this?**
-    - Does this element need **static content**, or is the content **dynamic state**?
-    - If dynamic, what is **state** and what is it called
-    - **Find all the 'events'** (user clicks, form submit, on load etc) in your app. 
+
+## HTML  
+
+    - section 1 (city creator)
+        - h1
+        - label: name
+            - input
+        - label: climate
+            - select
+                - option
+                - option
+                - option
+        - label: slogan
+            - textarea
+        - label: architecture
+            - select
+                - option
+                - option
+                - option
+    - label: button
+        - button
+        
+
+    - section 2 (city display)
+        - div
+            -h2
+            -img
+            -p
+
+    - section 3 (city add)
+        - ul
+        - button
+
+
+## States & Events
+City Object
+Array
+city-name-input => input
+climate-select => change
+architecture-select => change
+add-button => click
+
+
+
+
+
 1. For events, ask one by one, "What happens when" for each of these events. Does any state change?
 1. Once we know the _why_ of elements, state, and events -- think about how to implement the "Why" as a "How"
 1. Think about how to **validate each of your features** according to a Definition of Done
@@ -32,8 +74,7 @@ File parts:
 
 Detailed description:
 
-1. Imports 
-    - bring in utility functions plus tested logic and render functions
+
 1. State
     - data changes over time
     - constants with special meaning
